@@ -1,0 +1,176 @@
+body {
+    background-image: url("old-paper-texture-2.jpg");
+    background-repeat: repeat;
+    font-family: cursive;
+    margin: 0;
+    padding: 2px;
+    /*background-attachment: fixed;*/
+    /*font-size: 20px;*/
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+}
+
+body > div {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: cursive;
+    margin: 0px;
+    margin-top: 10px;
+
+}
+
+p, label {
+    /*font-size: 20px;*/
+    font-family: cursive;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(146, 0, 146);
+}
+
+a:hover{
+    color: rgb(250, 4, 250);
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    font-family: cursive;
+    border: 2px solid black;
+    padding: 2px 8px;
+
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px grey;
+}
+
+button:hover {
+    outline: none;
+    /*box-shadow: 0 0 3px darkgray;*/
+    background-color: orange;
+}
+
+button:active {
+    background-color: darkorange;
+}
+
+
+#infobox{
+    position: relative;
+    font-family: cursive;
+    color: white;
+    background: #bb0000;
+    border: 2px solid #bb0000;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+#renderedNoteContainer {
+    width: 400px;
+    height: 250px;
+    padding: 0;
+    position: relative;
+    /*border: 1px solid black;*/
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#renderedNote {
+    width: 400px;
+    height: 250px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.renderCanvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+#score, .settings {
+    width: 400px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 404px) {
+    #renderedNoteContainer, #renderedNote {
+      width: 96vw;
+      height: calc(96vw * 0.625);
+    }
+
+    #score, .settings {
+        width: 96vw;
+    }
+}
+
+div.note_card {
+    font-family: cursive;
+    border: 2px solid black;
+    margin: 3px;
+    padding: 4px;
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px grey;
+}
+
+div.note_card:hover {
+    background-color: orange;
+}
+
+div.note_card:active {
+    background-color: darkorange;
+}
+
+
+@keyframes right_answer_animation {
+    from {
+        color: #00bb00;
+        /*text-shadow: 0px 0px 8px #00bb00;*/
+    }
+    to {
+        color: black;
+        /*text-shadow: none;*/
+    }
+}
+
+@keyframes wrong_answer_animation {
+    from {
+        color: #ff2222;
+        /*text-shadow: 0px 0px 8px #ff2222;*/
+    }
+    to {
+        color: black;
+        /*text-shadow: none;*/
+    }
+}
+
+.right_answer {
+    color: black;
+    animation-name: right_answer_animation;
+    animation-duration: 1.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+.wrong_answer {
+    color: black;
+    animation-name: wrong_answer_animation;
+    animation-duration: 0.15s;
+    animation-iteration-count: 4;
+    animation-timing-function: ease-in;
+}
+
+#correct_answers, #incorrect_answers {
+    white-space: nowrap;
+}

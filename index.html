@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="style_file" rel="stylesheet" type="text/css" href="style.css" />
+    <link href="treble-32.png" rel="icon" type="image/x-icon" />
+    <title>Learn key signatures</title>
+    <script src="vexflow.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+  </head>
+
+  <body onload="onPageLoad();">
+
+    <div id="infobox">JavaScript is disabled</div>
+
+    <div id="toolbar">
+      <button onClick="startTesting();">Start</button>
+    </div>
+
+    <div id="score">
+      <span id="correct_answers">Correct: 0</span>;
+      <span id="incorrect_answers">Incorrect: 0</span>
+    </div>
+
+    <div id="renderedNoteContainer">
+      <div id="renderedNote"></div>
+    </div>
+
+    <div id="KeyCardsContainer"></div>
+
+    <h2>Help</h2>
+    <h3>The rules for determining major keys:</h3>
+    <ol>
+      <li>The key with no sharps or flats is C major.</li>
+      <li>For key signatures with sharps, the name of the major key is one half step higher than the last sharp of the key signature.</li>
+      <li>For key signatures with two or more flats, the name of the major key is the name of the next to the last flat of the key signature.</li>
+      <li>The key with one flat is F major.</li>
+    </ol>
+    <p>A relative minor is always three half steps lower than its relative major.</p>
+
+    <h2>Links</h2>
+    <p>
+      <a target="_blank" href="https://z-up.github.io/piano_notes_learning_app/">
+        Piano notes learning app
+      </a>
+    </p>
+
+    <h2>Used libraries</h2>
+    <p>
+      <a target="_blank" href="https://github.com/0xfe/vexflow">
+        <b>VexFlow</b> - an open-source library for rendering music notation
+      </a>
+    </p>
+
+  </body>
+
+</html>
